@@ -1,0 +1,156 @@
+1. 구조의 프로그래밍 설계 구조에서 선택구조 방법으로 개발을 진행하였다. 
+그런데 if를 사용하는 과정에서 설계와 다르게 동작하는 것을 확인하였다.
+다음문제를 해결하시오
+
+public static void main(String[] args) {
+int num = 0;
+Scanner input = new Scanner(System.in);
+num = input.nextInt();
+if(num ==1)
+System.out.println("입력값은");
+System.out.println("if문이 참일 경우만 실행됩니다");
+
+else if(num ==2) 
+System.out.println("입력 값은 2입니다");
+System.out.println("else if가 참일 경우만 실행됩니다");
+System.out.println("다음 문장이 실행됩니다!!!");
+
+============================================================
+
+1번 답안 =>
+public static void main(String[] args) }
+int num = 0;
+Scanner input = new Scanner(System.in);
+num = input.nextInt();
+if(num ==1) {
+
+System.out.println("입력값은");
+System.out.println("if문이 참일 경우만 실행됩니다");
+
+
+} else if(num ==2){
+System.out.println("입력 값은 2입니다");
+System.out.println("else if가 참일 경우만 실행됩니다");
+System.out.println("다음 문장이 실행됩니다!!!");
+}
+
+
+
+2. 구조적 프로그래밍 언어를 이용하여 명령어 언어로 코드를 작성하고 있다. 
+그러기 위해서 이전에 main에서 작성한 코드를 메소드화를 진행하기로 하였다.
+메소드 이름은 test로 진행하여 다음 코드를 메소드화 하시오
+(만약 return을 사용하고자 한다면 return type은 배열 또는 String, ArrayList 자료형만 가능합니다.
+메소드화 진행시 부분 점수가 있습니다.
+메소드화 10점, 연산기능,입.출력 기능을 따로 만들면 각 10점씩 총 30점입니다.
+
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+int num =0. temp = 0;
+System.out.println("수 입력");
+num = input.nextInt();
+
+while(true) {
+temp = num %10;
+num = num/10;
+System.out.println(temp);
+if(num ==0)
+break;
+}
+
+
+===============================
+2번 답안
+import java.util.Scanner;
+class a{
+	int num = 0 ; int temp = 0; 
+	public void mathod1() {
+		System.out.println("숫자입력");
+		Scanner input = new Scanner(System.in);
+		num = input.nextInt();
+	}
+	public void mathod2() {
+		while(true) {
+			temp = num %10;
+			num = num/10;
+			if(num ==0)
+			break;
+	}
+	}
+	public void mathod3() {
+		System.out.println(num);
+	}
+}
+public class MainClass10 {
+
+	public static void main(String[] args) {
+		a a = new a();
+		a.mathod1();
+		a.mathod2();
+		a.mathod3();
+	
+
+	}
+
+}
+
+3. 다음과 같이 메소드를 생성하고 실행하였더니 문제가 발생하였다. 해당 문제를 해결하시오
+public String test(); {
+int num
+System.out.println("수 저장")
+ num = 10;
+return num;
+}
+
+
+=============
+3.답안
+public int test() {
+
+int num;
+System.out.println("수 저장")
+num = 10;
+return num;
+}
+
+
+4. 객체지향 설계원칙에 의해 다형성중 오버라이딩을 사용하고자 한다. 
+그런데 오버라이딩이 동작하지 않는 현상이 발견되었다
+다음 내용을 해겨하시오(문제 해결시 자식 클래스의 내용을 수정하세요
+
+class AAA{
+	public void test() {}
+
+}
+
+class BBB{
+	public void test(int num) {}
+
+=======================
+4번 답안
+class BBB extends AAA{
+	public void test(){}
+
+System.out.println("수정했습니다");
+}
+
+
+
+5. 객체지향 언어를 활용하여 애플리케이션을 만들기로 하였다. 다음 내용은 main 메소드에서 작성한 코드며
+해당 내용을 AAA클래스를 생성하고 해당 클래스의 멤버메소드 public void test()을 생성하여
+해당 메소드에 main의 코드를 넣어 생성하시오.
+
+
+class AAA {
+
+ public void Member() {
+
+
+
+}
+
+
+
+
+
+
+
